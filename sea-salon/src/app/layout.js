@@ -1,9 +1,10 @@
-import { Inter } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import AppProvider from "@/components/AppContext";
 
-const inter = Inter({ subsets: ["latin"] });
+const font = Space_Grotesk({ subsets: ["latin"] });
 
 export const metadata = {
   title: "SEASalon",
@@ -13,12 +14,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className} >
-        <Navbar/>
-        <main className="flex min-h-screen flex-col items-center justify-between p-24">
-          {children}
-        </main>
-        <Footer/>
+      <body className={font.className} >
+        <AppProvider>
+          <Navbar/>
+          <main className="flex flex-col min-h-screen min-w-screen items-center p-[10px]">
+            {children}
+          </main>
+          <Footer/>
+        </AppProvider>
       </body>
     </html>
   );

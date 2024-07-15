@@ -9,7 +9,7 @@
 }
 
 :root{
-  --bg: #daf5f0;
+  --bg: #f3f2e9;
   --text: black;
 }
 
@@ -19,7 +19,7 @@ body {
 }
 
 .input-custom {
-  @apply w-96 border-2 p-2.5 focus:outline-none focus:bg-[#acddc3];
+  @apply w-96 border-2 p-2.5 focus:outline-none focus:bg-[#d1f3e1];
 }
 
 .input-custom:focus {
@@ -30,8 +30,16 @@ body {
   @apply shadow-[2px_2px_0px_rgba(0,0,0,1)];
 }
 
+.link-custom {
+  @apply h-12 border-2 p-2.5 bg-[#7fbc8c] hover:bg-[#6a9f75] hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] active:bg-[#6a9f75]
+}
+
+.tabs > *.active {
+  @apply underline 
+}
+
 button {
-  @apply h-12 mt-5 border-2 p-2.5 bg-[#7fbc8c] hover:bg-[#6a9f75] hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] active:bg-[#6a9f75];
+  @apply  border-2 p-2.5 bg-[#7fbc8c] hover:bg-[#6a9f75] hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] active:bg-[#6a9f75];
 }
 
 a{

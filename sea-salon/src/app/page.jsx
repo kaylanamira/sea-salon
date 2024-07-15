@@ -8,7 +8,7 @@ export default function Home() {
          <Hero/>
          <HomeReview/>
          <section>
-            <div className='text-center font-semibold'>
+            <div className='text-center font-semibold text-3xl'>
               <h3>Our Services</h3>
             </div>
             <div className='mt-6 mb-6 px-4 gap-4 grid grid-cols-1 sm:grid-cols-3  '>
